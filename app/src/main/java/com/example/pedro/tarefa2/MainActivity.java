@@ -26,8 +26,8 @@ public class MainActivity extends Activity {
 
     Button peso;
     Button altura;
-    double valorPesoRetornado;
-    double valorAlturaRetornado;
+    double valorPesoRetornado = 0.0;
+    double valorAlturaRetornado = 0.0;
     TextView pesoView;
     TextView alturaView;
     double imc;
@@ -63,7 +63,7 @@ public class MainActivity extends Activity {
 
     public void alterarPeso(View view) {
         Intent alterarPeso = new Intent(getApplicationContext(), EditDados.class);
-        alterarPeso.putExtra("peso", 0);
+        alterarPeso.putExtra("peso", this.valorPesoRetornado);
         alterarPeso.putExtra("requestCode", REQUEST_CODE_PESO);
         startActivityForResult(alterarPeso, REQUEST_CODE_PESO);
     }
@@ -72,7 +72,7 @@ public class MainActivity extends Activity {
         // altura = (Button)findViewById(R.id.altura);
 
         Intent alterarAltura = new Intent(getApplicationContext(), EditDados.class);
-        alterarAltura.putExtra("altura", 0);
+        alterarAltura.putExtra("altura", this.valorAlturaRetornado);
         alterarAltura.putExtra("requestCode", REQUEST_CODE_ALTURA);
         startActivityForResult(alterarAltura, REQUEST_CODE_ALTURA);
 
@@ -87,8 +87,8 @@ public class MainActivity extends Activity {
                 valorPesoRetornado = valorPeso.getDouble("peso");
 
             } catch (NullPointerException npe) {
-                valorPesoRetornado = 0;
-                Toast.makeText(this, "Erro", Toast.LENGTH_LONG).show();
+                valorPesoRetornado = this.valorPesoRetornado;
+                //Toast.makeText(this, "Erro", Toast.LENGTH_LONG).show();
             }
             pesoView.setText(Double.toString(valorPesoRetornado));
             //altura
@@ -97,11 +97,11 @@ public class MainActivity extends Activity {
                 Bundle valorAltura = data.getExtras();
                 valorAlturaRetornado = valorAltura.getDouble("altura");
             } catch (NullPointerException npe) {
-                valorAlturaRetornado = 0;
-                Toast.makeText(this, "Erro", Toast.LENGTH_LONG).show();
+                valorAlturaRetornado = this.valorAlturaRetornado;
+                //Toast.makeText(this, "Erro", Toast.LENGTH_LONG).show();
             } catch (Resources.NotFoundException rnfe){
-                valorAlturaRetornado = 0;
-                Toast.makeText(this, "Erro", Toast.LENGTH_LONG).show();
+                valorAlturaRetornado = this.valorAlturaRetornado;
+                //Toast.makeText(this, "Erro", Toast.LENGTH_LONG).show();
             }
             alturaView.setText(Double.toString(valorAlturaRetornado));
         }

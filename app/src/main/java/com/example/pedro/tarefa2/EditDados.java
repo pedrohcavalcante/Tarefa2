@@ -57,4 +57,8 @@ public class EditDados extends Activity {
         setResult(RESULT_OK, retorno);
         finish();
     }
+
+    public void cancelar(View view){
+        finish();
+    }
 }
