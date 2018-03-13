@@ -41,7 +41,9 @@ public class EditDados extends Activity {
         request = valores.getInt("requestCode");
         if (request == REQUEST_PESO){
             valorX.setText(STRING_PESO);
+            valorDado.setHint("Peso");
         }else if(request == REQUEST_ALTURA){
+            valorDado.setHint("Altura");
             valorX.setText(STRING_ALTURA);
         }
     }
@@ -50,15 +52,30 @@ public class EditDados extends Activity {
 
         Intent retorno = new Intent();
         if (request == REQUEST_PESO){
-            retorno.putExtra("peso", Double.parseDouble(valorDado.getText().toString()));
+
+            try{
+                retorno.putExtra("peso", Double.parseDouble(valorDado.getText().toString()));
+            } catch (NumberFormatException nfe){
+                Toast.makeText(this, "Erro", Toast.LENGTH_SHORT).show();
+                finish();
+            } finally {
+
+            }
         }else if(request == REQUEST_ALTURA){
-            retorno.putExtra("altura", Double.parseDouble(valorDado.getText().toString()));
+
+            try{
+                retorno.putExtra("altura", Double.parseDouble(valorDado.getText().toString()));
+            } catch (NumberFormatException nfe){
+                Toast.makeText(this, "Erro", Toast.LENGTH_SHORT).show();
+                finish();
+            }
         }
         setResult(RESULT_OK, retorno);
         finish();
     }
 
     public void cancelar(View view){
+
         finish();
     }
 }
