@@ -7,29 +7,30 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
+/**
+ * @author pedrohcavalcante
+ */
 public class MainActivity extends Activity {
 
     /**
-     * @title RequestCodes
-     * @param 22 for peso
-     * @param 33 for altura
+     *  RequestCodes
+     *  22 for peso
+     *  33 for altura
      */
     public static final int REQUEST_CODE_PESO = 22;
     public static final int REQUEST_CODE_ALTURA = 33;
     public static final String SEU_IMC_E = "Seu IMC é: ";
-    public static final String COLOR = "#FFFFFF";
 
     Button peso;
     Button altura;
     double valorPesoRetornado = 0.0;
     double valorAlturaRetornado = 0.0;
-    TextView pesoView;
-    TextView alturaView;
+    EditText pesoView;
+    EditText alturaView;
     double imc;
     TextView resultado;
     TextView magrezaGrave;
@@ -44,6 +45,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
         pesoView = findViewById(R.id.pesoView);
         alturaView = findViewById(R.id.alturaView);
@@ -58,6 +60,10 @@ public class MainActivity extends Activity {
         obesidade1 = findViewById(R.id.obesidade1);
         obesidade2 = findViewById(R.id.obesidade2);
         obesidade3 = findViewById(R.id.obesidade3);
+        //pesoView.setText(Double.toString(valorPesoRetornado));
+        pesoView.setHint("0.0");
+        //alturaView.setText(Double.toString(valorAlturaRetornado));
+        alturaView.setHint("0.0");
     }
 
 
@@ -108,6 +114,26 @@ public class MainActivity extends Activity {
     }
 
     public void calcular(View view) {
+        if (pesoView == null || pesoView.length() == 0){
+            Toast.makeText(this, "Erro", Toast.LENGTH_SHORT).show();
+        }else{
+            try{
+                valorPesoRetornado = Double.parseDouble(pesoView.getText().toString());
+                pesoView.setEnabled(false);
+            } catch(IllegalStateException ise){
+                Toast.makeText(this, "Erro", Toast.LENGTH_SHORT).show();
+            }
+        }
+        if (alturaView == null || alturaView.length() == 0){
+            Toast.makeText(this, "Erro", Toast.LENGTH_SHORT).show();
+        }else{
+            try{
+                valorAlturaRetornado = Double.parseDouble(alturaView.getText().toString());
+                alturaView.setEnabled(false);
+            } catch (IllegalStateException ise){
+                Toast.makeText(this, "Erro", Toast.LENGTH_SHORT).show();
+            }
+        }
         magrezaGrave.setTextColor(Color.BLACK);
         magrezaModerada.setTextColor(Color.BLACK);
         magrezaLeve.setTextColor(Color.BLACK);

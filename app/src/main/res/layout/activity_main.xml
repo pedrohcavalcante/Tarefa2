@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="0dp"
-    tools:context="com.example.pedro.tarefa2.MainActivity">
+    android:paddingTop="0dp">
 
     <TextView
         android:layout_width="match_parent"
@@ -22,19 +19,21 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/textPeso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="Peso: " />
 
-        <TextView
+        <EditText
             android:id="@+id/pesoView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="0,0" />
+            android:inputType="numberDecimal"/>
 
         <TextView
+            android:id="@+id/pesoUnidade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -48,6 +47,7 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/alturaTexto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -58,15 +58,18 @@
             android:layout_marginStart="10dp"
             android:text="Altura:" />
 
-        <TextView
+        <EditText
             android:id="@+id/alturaView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="0,0" />
+
+            android:hint="0.0"
+            android:inputType="numberDecimal"
+            />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/alturaUnidade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
