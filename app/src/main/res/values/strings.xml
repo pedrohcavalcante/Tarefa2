@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Tarefa2</string>
+    <string name="alterar_peso">Alterar Peso</string>
+    <string name="alterar_altura">Alterar Altura</string>
+    <string name="calculadora_imc">Calculadora IMC</string>
+    <string name="peso">Peso:</string>
+    <string name="kg">Kg</string>
+    <string name="altura">Altura:</string>
+    <string name="cm">cm</string>
+    <string name="calcular">Calcular</string>
+    <string name="resultado">Resultado!</string>
+    <string name="aperte_o_bot_o_calcular">Aperte o botão Calcular!</string>
+    <string name="menor_que_16_magreza_grave">Menor que 16 - Magreza Grave</string>
+    <string name="_16_a_17_magreza_moderada">16 a 17 - Magreza Moderada</string>
+    <string name="_17_a_18_5_magreza_leve">17 a 18,5 - Magreza Leve</string>
+    <string name="_18_5_a_25_saud_vel">18,5 a 25- Saudável</string>
+    <string name="_25_a_30_sobrepeso">25 a 30 - Sobrepeso</string>
+    <string name="_30_a_35_obesidade_grau_1">30 a 35 - Obesidade Grau 1</string>
+    <string name="_35_a_40_obesidade_grau_2">35 a 40 - Obesidade Grau 2</string>
+    <string name="maior_que_40_obesidade_grau_3">maior que 40 - Obesidade Grau 3</string>
+    <string name="alterar_dados">Alterar Dados</string>
+    <string name="alterar">Alterar</string>
+    <string name="cancelar">Cancelar</string>
 </resources>

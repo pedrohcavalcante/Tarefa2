@@ -20,7 +20,7 @@
             android:layout_marginLeft="100dp"
             android:layout_marginRight="60dp"
             android:layout_marginTop="10dp"
-            android:text="Alterar Dados"
+            android:text="@string/alterar_dados"
             android:textAlignment="center"
             android:textSize="30sp"
             tools:layout_editor_absoluteX="150dp"
@@ -60,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="alterar"
-            android:text="Alterar" />
+            android:text="@string/alterar" />
 
     </LinearLayout>
 
@@ -75,7 +75,7 @@
             android:onClick="cancelar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancelar" />
+            android:text="@string/cancelar" />
     </LinearLayout>
 
 

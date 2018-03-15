@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_marginTop="10dp"
-        android:text="Calculadora IMC"
+        android:text="@string/calculadora_imc"
         android:textAlignment="center"
         android:textSize="24sp" />
 
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Peso: " />
+            android:text="@string/peso" />
 
         <EditText
             android:id="@+id/pesoView"
@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Kg" />
+            android:text="@string/kg" />
 
 
     </LinearLayout>
@@ -56,15 +56,13 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginStart="10dp"
-            android:text="Altura:" />
+            android:text="@string/altura" />
 
         <EditText
             android:id="@+id/alturaView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-
-            android:hint="0.0"
             android:inputType="numberDecimal"
             />
 
@@ -73,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="cm" />
+            android:text="@string/cm" />
     </LinearLayout>
 
 
@@ -90,7 +88,7 @@
             android:layout_marginLeft="35dp"
             android:layout_weight="1"
             android:onClick="alterarPeso"
-            android:text="Alterar Peso" />
+            android:text="@string/alterar_peso" />
 
         <Button
             android:id="@+id/altura"
@@ -99,7 +97,7 @@
             android:layout_marginRight="50dp"
             android:layout_weight="1"
             android:onClick="alterarAltura"
-            android:text="Alterar Altura" />
+            android:text="@string/alterar_altura" />
     </LinearLayout>
 
     <LinearLayout
@@ -117,7 +115,7 @@
             android:layout_marginRight="140dp"
             android:layout_weight="1"
             android:onClick="calcular"
-            android:text="Calcular" />
+            android:text="@string/calcular" />
     </LinearLayout>
 
     <TextView
@@ -125,7 +123,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="Resultado!"
+        android:text="@string/resultado"
         android:textAlignment="center"
         android:textSize="24sp" />
 
@@ -134,7 +132,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Aperte o botão Calcular!"
+        android:text="@string/aperte_o_bot_o_calcular"
         android:textAlignment="center" />
 
     <LinearLayout
@@ -145,7 +143,7 @@
             android:id="@+id/magrezagrave"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Menor que 16 - Magreza Grave" />
+            android:text="@string/menor_que_16_magreza_grave" />
 
 
     </LinearLayout>
@@ -158,7 +156,7 @@
             android:id="@+id/magrezamoderada"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="16 a 17 - Magreza Moderada" />
+            android:text="@string/_16_a_17_magreza_moderada" />
     </LinearLayout>
 
     <LinearLayout
@@ -169,7 +167,7 @@
             android:id="@+id/magrezaleve"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="17 a 18,5 - Magreza Leve" />
+            android:text="@string/_17_a_18_5_magreza_leve" />
     </LinearLayout>
 
     <LinearLayout
@@ -180,7 +178,7 @@
             android:id="@+id/saudavel"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="18,5 a 25- Saudável" />
+            android:text="@string/_18_5_a_25_saud_vel" />
     </LinearLayout>
 
     <LinearLayout
@@ -191,7 +189,7 @@
             android:id="@+id/sobrepeso"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="25 a 30 - Sobrepeso" />
+            android:text="@string/_25_a_30_sobrepeso" />
     </LinearLayout>
 
     <LinearLayout
@@ -202,7 +200,7 @@
             android:id="@+id/obesidade1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="30 a 35 - Obesidade Grau 1" />
+            android:text="@string/_30_a_35_obesidade_grau_1" />
     </LinearLayout>
 
     <LinearLayout
@@ -213,7 +211,7 @@
             android:id="@+id/obesidade2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="35 a 40 - Obesidade Grau 2" />
+            android:text="@string/_35_a_40_obesidade_grau_2" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -223,7 +221,7 @@
             android:id="@+id/obesidade3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="maior que 40 - Obesidade Grau 3" />
+            android:text="@string/maior_que_40_obesidade_grau_3" />
     </LinearLayout>
 
 </LinearLayout>
